@@ -1,9 +1,50 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title></title>
-    <link rel=" stylesheet" href="kmn.css">
-  </head>
-  <body>
-   misses me, always find me here!!!!!!!!!!!
-</body></html>
+    <head>
+        <title></title>
+        <link rel="stylesheet" href="comic.css">
+    </head>
+    <body>
+        <section class="contact">
+            <h2> contact me!</h2>
+            <form action="#">
+                <div class="input-box">
+                <div class="input-field field">
+                    <input type="text" placeholder="full name"
+                    id="name" class="item" autocomplete="off">
+                    <div class="error-txt">FUll name can't be blank!</div>
+                </div>
+                <div class="input-box">
+                <div class="input-field field">
+                    <input type="text" placeholder="email address"
+                    id="email" class="item" autocomplete="off">
+                    <div class="error-txt">email can't be blank!</div>
+                </div>
+                </div>
+                </div>
+                <div class="input-box">
+                <div class="input-field field">
+                    
+                    <input type="text" placeholder="phone number"
+                    id="phone" class="item" autocomplete="off">
+                    <div class="error-txt">phone number can't be blank!</div>
+                </div></div>
+                <div class="input-box">
+                <div class="input-field field">
+                    <input type="text" placeholder="subject"
+                    id="name" class="item" autocomplete="off">
+                    <div class="error-txt">subject can't be blank!</div>
+                </div></div>
+                <div class="textarea-field field">
+                    <textarea name="" id="message" placeholder="your message"
+                     class="item" autocomplete="off"></textarea>
+                     <div class="error-txt">message can't be blank!</div>
+                </div>
+                <button type="submit">send message</button>
+            </form>
+        </section>
+        <script src="https://smtpjs.com/v3/smtp.js">
+        </script>
+        <script src="comic.js"></script>
+    </body>
+</html>
