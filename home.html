@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<!-- saved from url=(0057)file:///C:/Users/wk/OneDrive/Desktop/html/train/give.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="cripics" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Home | Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="advanced.css">
+</head>
+<body  onclick="displaydatetime()">
+     <p id="datetime"></p>
+    <div id="timer"></div>
+  <div class="clock-container">
+    <div class="date-display" id="dateField">March 29, 2025</div>
+    <div class="time-display">
+      <span id="hours">15</span>
+      <span class="colon">:</span>
+      <span id="minutes">12</span>
+      <span class="colon">:</span>
+      <span id="seconds">01</span>
+    </div>
+  </div>
+
+   
+ 
+    <!-- Top Navigation Bar -->
+    <div class="top-bar">
+        <div class="logo">LOGO</div>
+        <div class="nav-links">
+            <a href="#" class="active" id="nav-home">HOME</a>
+            
+            <div class="dropdown">
+                <a href="#" id="nav-watch" class="">WATCH <i class="fas fa-caret-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="#" data-section="download">Download</a>
+                    <a href="#" data-section="upload">Upload</a>
+                    <a href="#" data-section="save">Save</a>
+                    <a href="#" data-section="watch-later">Watch Later</a>
+                </div>
+            </div>
+            
+            <div class="dropdown">
+                <a href="#" id="nav-recognize" class="">social class <i class="fas fa-caret-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="#" data-section="posts">Posts</a>
+                    <a href="#" data-section="friends">Friends</a>
+                    <a href="#" data-section="followers">Followers</a>
+                    <a href="#" data-section="profile-details">👤Profile Details</a>
+                </div>
+            </div>
+        </div>
+        <div class="user-controls">
+            <input type="text" class="search-bar" placeholder="Search...">
+            <div class="notification" id="notification-btn">
+                <i class="fas fa-bell"></i>
+                <span class="notification-badge" id="notification-count" style="display: flex;">1</span>
+                <div class="notifications-dropdown" id="notifications-dropdown" style="display: none;">
+                    <div class="notification-item">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="User">
+                        <div class="content">
+                            <div>John Doe changed password</div>
+                            <div class="time">1 minutes ago</div>
+                        </div>
+                    </div>
+                    <div class="notification-item">
+                        <img src="https://randomuser.me/api/portraits/women/21.jpg" alt="User">
+                        <div class="content">
+                            <div>Jane Smith viewed your profile</div>
+                            <div class="time">25 minutes ago</div>
+                        </div>
+                    </div>
+                    <div class="notification-item">
+                        <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="User">
+                        <div class="content">
+                            <div>Mike Johnson liked your video</div>
+                            <div class="time">1 hour ago</div>
+                        </div>
+                    </div>
+                    <div class="notification-item">
+                        <img src="https://randomuser.me/api/portraits/women/33.jpg" alt="User">
+                        <div class="content">
+                            <div>Sarah Williams started following you</div>
+                            <div class="time">2 hours ago</div>
+                        </div>
+                    </div>
+                    <div class="notification-item">
+                        <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="User">
+                        <div class="content">
+                            <div>You have a new invitation</div>
+                            <div class="time">5 hours ago</div>
+                        </div>
+                    </div>
+                    <div class="notification-item">
+                        <img src="https://randomuser.me/api/portraits/women/28.jpg" alt="User">
+                        <div class="content">
+                            <div>Emily Davis commented on your post</div>
+                            <div class="time">8 hours ago</div>
+                        </div>
+                    </div>
+                    <div class="notification-item">
+                        <img src="https://randomuser.me/api/portraits/men/18.jpg" alt="User">
+                        <div class="content">
+                            <div>Robert Brown liked your comment</div>
+                            <div class="time">1 day ago</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="user-avatar" id="header-avatar">
+                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="User">
+            </div>
+            <button class="logout">🚪LOGOUT</button>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Main Content Area -->
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-item" id="profile-dropdown-btn" data-section="profile">
+                <i class="fas fa-user"></i>
+                <span>👤Profile</span>
+                <i class="fas fa-caret-down" style="margin-left: auto;"></i>
+            </div>
+            <div class="sidebar-dropdown" id="profile-dropdown" style="display: none;">
+                <a href="#" data-section="view-profile">View Profile</a>
+                <a href="#" data-section="edit-profile">Edit Profile</a>
+                <a href="#" data-section="update-profile">Update Profile</a>
+            </div>
+
+
+
+
+
+           <div class="sidebar-item" id="chat-dropdown-btn" data-section="chat">
+                <i class="fas fa-user"></i>
+                <span>chat</span>
+                <i class="fas fa-caret-down" style="margin-left: auto;"></i>
+            </div>
+            <div class="sidebar-dropdown" id="chat-dropdown" style="display: none;">
+                <a href="#" data-section="txt-chat">Text Message</a>
+                <a href="#" data-section="vid-chat">Received video</a>
+                <a href="#" data-section="aud-chat">received audio</a>
+                <a href="#" data-section="dct-chat">documentation</a>
+                <a href="#" data-section="lk-chat">linkers</a>
+                <a href="#" data-section="cont-chat">contact</a>
+          
+            </div>
+            <div class="sidebar-item" id="find-dropdown-btn" data-section="Find-me">
+                <i class="fas fa-user"></i>
+                <span>Find Me</span>
+                <i class="fas fa-caret-down" style="margin-left: auto;"></i>
+           </div>
+            <div class="sidebar-dropdown" id="find-dropdown" style="display: none;">
+                <a href="#" data-section="lct-find">Set my location</a>
+                <a href="#" data-section="disp-find">public location</a>
+                <a href="#" data-section="emai-find">find via email</a>
+                <a href="#" data-section="cont-find">locate phone number</a>
+                <a href="#" data-section="hist-find">my location history</a>
+                <a href="#" data-section="hide-find">hide my location remotely</a>
+
+            </div>
+
+           <div class="sidebar-item"  id="voice-dropdown-btn" data-section="v">
+                        <i class="fas fa-voice"></i>
+                        <span>Voice Call</span>
+                <i class="fas fa-caret-down" style="margin-left: auto;"></i>
+           </div>
+            <div class="sidebar-dropdown" id="voice-dropdown" style="display: none;">
+                <a href="#" data-section="indvc">individualism</a>
+                <a href="#" data-section="groupvc">group dialogue</a></div>
+
+
+
+
+            <div class="sidebar-item"id="video-dropdown-btn" data-section="video-call">
+                <i class="fas fa-video"></i>
+                <span>Video Call</span>
+            </div>
+             <div class="sidebar-dropdown" id="video-dropdown" style="display: none;">
+                <a href="#" data-section="indvd">one-on-one</a>
+                <a href="#" data-section="groupvd">one-to-many</a></div>
+
+
+
+
+            <div class="sidebar-item"  id="live-dropdown-btn"data-section="live">
+                <i class="fas fa-broadcast-tower"></i>
+                <span>Live</span>
+            </div>
+             <div class="sidebar-dropdown" id="live-dropdown" style="display: none;">
+                <a href="#" data-section="lvnow">go live</a>
+                <a href="#" data-section="periodic">set reminder</a></div>
+            
+
+            <div class="sidebar-item"id="sett-dropdown-btn" data-section="settings">
+                <i class="fas fa-cog"></i>
+                <span>NAVIGATION</span>
+            </div>
+             <div class="sidebar-dropdown" id="sett-dropdown" style="display: none;">
+                <a href="#" data-section="back">background</a>
+                  <a href="#" data-section="date">date/time</a>
+                  <a href="#" data-section="secure">security</a>
+                  <a href="#" data-section="privacy">privacy</a>
+                  <a href="#" data-section="lockdown">system lockdown</a>
+                  <a href="#" data-section="slp">sleep</a>
+                </div>
+          
+  <div class="sidebar-item"id="acc-dropdown-btn" data-section="Account">
+                <i class="fas fa-cog"></i>
+                <span>Account</span>
+            </div>
+             <div class="sidebar-dropdown" id="acc-dropdown" style="display: none;">
+                <a href="#" data-section="balance">Balance</a>
+                  <a href="#" data-section="depo">Deposit</a>
+                  <a href="#" data-section="res">Transver</a>
+                  <a href="#" data-section="his">history</a>
+                </div></div>
+
+
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Home Content with Quick Actions -->
+            <div id="home-content" class="content-section active">
+                <h1 class="page-title">Dashboard Home</h1>
+                <p>Welcome back! Quick access to all features:</p>
+                
+                <div class="quick-actions">
+                    <!-- Profile Actions -->
+                    <div class="action-card" data-section="view-profile">
+                        <i class="fas fa-user"></i>
+                        <h3>View Profile</h3>
+                        <p>See your profile details</p>
+                    </div>
+                    <div class="action-card" data-section="edit-profile">
+                        <i class="fas fa-edit"></i>
+                        <h3>Edit Profile</h3>
+                        <p>Update your information</p>
+                    </div>
+                    <div class="action-card" data-section="update-profile">
+                        <i class="fas fa-sync"></i>
+                        <h3>Update Profile</h3>
+                        <p>Refresh profile data</p>
+                    </div>
+
+
+                     <div class="action-card" data-section="vid-chat">
+                        <i class="fas fa-user"></i>
+                        <h3>View received video</h3>
+                        <p>visual reality</p>
+                    </div>
+                    <div class="action-card" data-section="aud-chat">
+                        <i class="fas fa-edit"></i>
+                        <h3>listen to audio chat</h3>
+                        <p>keep entertained</p>
+                    </div>
+                    <div class="action-card" data-section="txt-chat">
+                        <i class="fas fa-sync"></i>
+                        <h3>message</h3>
+                        <p>preview messages</p>
+                    </div>
+                     <div class="action-card" data-section="lk-chat">
+                        <i class="fas fa-user"></i>
+                        <h3>my links</h3>
+                        <p>what contained</p>
+                    </div>
+                    <div class="action-card" data-section="dct-chat">
+                        <i class="fas fa-edit"></i>
+                        <h3>Documents</h3>
+                        <p>my documentation</p>
+                    </div>
+                    <div class="action-card" data-section="cont-chat">
+                        <i class="fas fa-sync"></i>
+                        <h3>contact</h3>
+                        <p>view, save, share savely</p>
+                    </div>
+
+
+
+<div class="action-card" data-section="lct-find">
+                        <i class="fas fa-user"></i>
+                        <h3>Auto-detect location</h3>
+                        <p>On/Off</p>
+                    </div>
+
+            <div class="action-card" data-section="disp-find">
+                        <i class="fas fa-user"></i>
+                        <h3>share my location</h3>
+                        <p>show/hide</p>
+                    </div>
+                <div class="action-card" data-section="emai-find">
+                        <i class="fas fa-user"></i>
+                        <h3>find my device via email</h3>
+                        <p>tap to find</p>
+                    </div>
+                    <div class="action-card" data-section="cont-find">
+                        <i class="fas fa-user"></i>
+                        <h3>locate my number</h3>
+                        <p>enter number to locate</p>
+                    </div>
+                <div class="action-card" data-section="hist-find">
+                        <i class="fas fa-user"></i>
+                        <h3>history</h3>
+                        <p>recent visted places</p>
+                    </div>
+                <div class="action-card" data-section="hide-find">
+                        <i class="fas fa-user"></i>
+                        <h3>manage my location</h3>
+                        <p>disable/enable</p>
+                    </div>
+
+                      <div class="action-card" data-section="indvc">
+                        <i class="fas fa-phone"></i>
+                        <h3>quick call 1</h3>   
+                         <p>Call a friends</p>
+                    </div>
+                <div class="action-card" data-section="groupvc">
+                        <i class="fas fa-phone"></i>
+                        <h3>link us</h3>
+                        <p>group call</p>
+                    </div>
+                    <div class="action-card" data-section="bal">
+                        <i class="fas fa-bal"></i>
+                        <h3>Balance</h3>
+                        <p>chek my balance</p>
+                    </div>
+                    <div class="action-card" data-section="hist">
+                        <i class="fas fa-hist"></i>
+                        <h3>history</h3>
+                        <p>Track my activitiesl</p>
+                    </div>
+                    <div class="action-card" data-section="tran">
+                        <i class="fas fa-send"></i>
+                        <h3>send cash</h3>
+                        <p>tranfer resources</p>
+                    </div>
+                    <div class="action-card" data-section="dep">
+                        <i class="fas fa-deposit"></i>
+                        <h3>Deposit</h3>
+                        <p>Tap to deposit</p>
+                    </div>
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    <!-- Other Features -->
+                    <div class="action-card" data-section="chat">
+                        <i class="fas fa-comment"></i>
+                        <h3>Chat</h3>
+                        <p>Connect with friends</p>
+                    </div>
+                    <div class="action-card" data-section="find-me">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Find Me</h3>
+                        <p>Share your location</p>
+                    </div>
+                    <div class="action-card" data-section="voice-call">
+                        <i class="fas fa-phone"></i>
+                        <h3>Voice Call</h3>
+                        <p>Make audio calls</p>
+                    </div>
+                    <div class="action-card" data-section="video-call">
+                        <i class="fas fa-video"></i>
+                        <h3>Video Call</h3>
+                        <p>Start video calls</p>
+                    </div>
+                    <div class="action-card" data-section="live">
+                        <i class="fas fa-broadcast-tower"></i>
+                        <h3>Live</h3>
+                        <p>Go live now</p>
+                    </div>
+                    <div class="action-card" data-section="settings">
+                        <i class="fas fa-cog"></i>
+                        <h3>Settings</h3>
+                        <p>Configure preferences</p>
+                    </div>
+                    <div class="action-card" data-section="account">
+                        <i class="fas fa-cog"></i>
+                        <h3>My Account</h3>
+                        <p>welcome to my account</p>
+                    </div>
+                    <!-- Watch Features -->
+                    <div class="action-card" data-section="download">
+                        <i class="fas fa-download"></i>
+                        <h3>Download</h3>
+                        <p>Download your files</p>
+                    </div>
+                    <div class="action-card" data-section="upload">
+                        <i class="fas fa-upload"></i>
+                        <h3>Upload</h3>
+                        <p>Share your files</p>
+                    </div>
+                    <div class="action-card" data-section="save">
+                        <i class="fas fa-bookmark"></i>
+                        <h3>Save</h3>
+                        <p>Save for later</p>
+                    </div>
+                    <div class="action-card" data-section="watch-later">
+                        <i class="fas fa-clock"></i>
+                        <h3>Watch Later</h3>
+                        <p>View saved content</p>
+                    </div>
+                    
+
+
+
+
+                    <!-- Recognize Me Features -->
+                    <div class="action-card" data-section="posts">
+                        <i class="fas fa-newspaper"></i>
+                        <h3>Posts</h3>
+                        <p>View and create posts</p>
+
+
+
+
+
+
+
+                    </div>
+                    <div class="action-card" data-section="friends">
+                        <i class="fas fa-user-friends"></i>
+                        <h3>Friends</h3>
+                        <p>Manage connections</p>
+                    </div>
+                    <div class="action-card" data-section="followers">
+                        <i class="fas fa-users"></i>
+                        <h3>Followers</h3>
+                        <p>See who follows you</p>
+                    </div>
+                    <div class="action-card" data-section="profile-details">
+                        <i class="fas fa-id-card"></i>
+                        <h3>Profile Details</h3>
+                        <p>See detailed information</p>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <div id="chat-area-content" class="content-section">
+                <h1 class="page-title">show chats</h1>
+                <div class="chat-details">gghggghgg</div></div>
+
+
+
+
+
+
+            <!-- Profile Content Sections -->
+            <div id="view-profile-content" class="content-section">
+                <h1 class="page-title">View Profile</h1>
+                <div class="profile-details">
+                    <div class="avatar-upload">
+                        <div class="avatar-upload-preview">
+                            <img id="profile-avatar-img" src="https://randomuser.me/api/portraits/women/44.jpg" alt="Profile Avatar">
+                        </div>
+                    </div>
+                    <div class="profile-field">
+                        <label>Name</label>
+                        <div id="view-name">Jane Doe</div>
+                    </div>
+                    <div class="profile-field">
+                        <label>Email</label>
+                        <div id="view-email">jane.doe@example.com</div>
+                    </div>
+                    <div class="profile-field">
+                        <label>Bio</label>
+                        <div id="view-bio">Digital creator and tech enthusiast</div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+  <!-- account Content Sections -->
+            <div id="view-account-content" class="content-section">
+                <h1 class="page-title">accounts</h1>
+               
+                    <div class="account-field">
+                        <label>balance</label>
+                        <div id="local">local account</div>
+                    </div>
+                     <div class="account-field">
+                        <label>savings</label>
+                        <div id="saving">savings</div>
+                    </div>
+                    <div class="account-field">
+                        <label>Bio</label>
+                        <div id="loan">contact loaners</div>
+                    
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              <div id="edit-profile-content" class="content-section">
+                <h1 class="page-title">Edit Profile</h1>
+                <div class="profile-details">
+                    <div class="avatar-upload">
+                        <div class="avatar-upload-preview">
+                            <img id="edit-avatar-img" src="https://randomuser.me/api/portraits/women/44.jpg" alt="Profile Avatar">
+                        </div>
+                        <div>
+                            <input type="file" id="avatar-upload-input" accept="image/*" style="display: none;">
+                            <button class="btn btn-primary" onclick="document.getElementById('avatar-upload-input')
+                            .click()">Change Avatar</button>
+                        </div>
+                    </div>
+                    <div class="profile-field">
+                        <label for="edit-name">Name</label>
+                        <input type="text" id="edit-name" value="calliomes">
+                    </div>
+                    <div class="profile-field">
+                        <label for="edit-email">Email</label>
+                        <input type="email" id="edit-email" value="calliomes@example.com">
+                    </div>
+                    <div class="profile-field">
+                        <label for="edit-bio">Bio</label>
+                        <textarea id="edit-bio" rows="3">Digital creator and tech enthusiast</textarea>
+                    </div>
+                    <div class="profile-actions">
+                        <button class="btn btn-primary" id="save-profile-btn">Save Changes</button>
+                        <button class="btn btn-secondary" id="cancel-edit-btn">Cancel</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="update-profile-content" class="content-section">
+                <h1 class="page-title">Update Profile</h1>
+                <div class="profile-details">
+                    <p>Your profile has been updated across the platform.</p>
+                    <div class="profile-field">
+                        <label>Name</label>
+                        <div id="update-name">caleb makini</div>
+                    </div>
+                    <div class="profile-field">
+                        <label>Email</label>
+                        <div id="update-email">makinicaleb@gmail.com</div>
+                    </div>
+                    <div class="profile-field">
+                        <label>Avatar</label>
+                        <div class="avatar-upload-preview" style="width: 60px; height: 60px;">
+                            <img src="file:///C:/UsersadminPicturesCamera%20Roll" alt="Profile Avatar">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+            <!-- Posts Section -->
+            <div id="posts-content" class="content-section">
+                <h1 class="page-title">Posts</h1>
+                
+                <div class="upload-post">
+                    <textarea placeholder="What&#39;s on your mind?" id="post-content"></textarea>
+                    <div class="upload-post-actions">
+                        <div class="upload-post-options">
+                            <div class="upload-post-option">
+                                <i class="fas fa-image"></i> Photo
+                                <input type="file" id="post-image" accept="image/*" style="display: none;">
+                            </div>
+                            <div class="upload-post-option">
+                                <i class="fas fa-video"></i> Video
+                                <input type="file" id="post-video" accept="video/*" style="display: none;">
+                            </div>
+                            <button class="emoji-btn" id="emoji-btn">😊</button>
+                            <div class="emoji-picker" id="emoji-picker" style="display: none;">
+                                <span class="emoji-option">😀</span>
+                                <span class="emoji-option">😂</span>
+                                <span class="emoji-option">😍</span>
+                                <span class="emoji-option">👍</span>
+                                <span class="emoji-option">👏</span>
+                                <span class="emoji-option">🙌</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary" id="post-submit">Post</button>
+                    </div>
+                </div>
+                
+                <div class="post-container" id="post-1">
+                    <div class="post-header">
+                        <div class="post-avatar">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="User">
+                        </div>
+                        <div class="post-user">John Doe</div>
+                        <div class="post-time">2 hours ago</div>
+                    </div>
+                    <div class="post-content">
+                        Just visited the most amazing place! The views were breathtaking.
+                    </div>
+                    <img src="https://source.unsplash.com/random/600x400?nature" class="post-image">
+                    <div class="post-actions">
+                        <div class="post-action like-btn" data-post="1">
+                            <i class="fas fa-thumbs-up"></i> <span class="like-text">Like</span>
+                        </div>
+                        <div class="post-action comment-btn" data-post="1">
+                            <i class="fas fa-comment"></i> Comment
+                        </div>
+                        <div class="post-action share-btn" data-post="1">
+                            <i class="fas fa-share"></i> Share
+                        </div>
+                        <div class="post-action follow-btn" data-post="1">
+                            <i class="fas fa-user-plus"></i> Follow
+                        </div>
+                    </div>
+                    
+                    <!-- Comment section -->
+                    <div class="comment-section" id="comment-section-1">
+                        <div class="comment-form">
+                            <textarea class="comment-input" placeholder="Write a comment..."></textarea>
+                            <button class="comment-submit">Post</button>
+                        </div>
+                        <div class="comments-list">
+                            <div class="comment">
+                                <div class="comment-avatar">
+                                    <img src="https://randomuser.me/api/portraits/women/28.jpg" alt="User">
+                                </div>
+                                <div class="comment-content">
+                                    <div class="comment-user">Emily Davis</div>
+                                    <div class="comment-text">Looks amazing! Where is this?</div>
+                                    <div class="comment-actions">
+                                        <div class="comment-action like-comment">Like</div>
+                                        <div class="comment-action">Reply</div>
+                                        <div class="comment-time"onclick="displaydatetime()">
+    <p id="datetime"></p></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="comment">
+                                <div class="comment-avatar">
+                                    <img src="https://randomuser.me/api/portraits/men/18.jpg" alt="User">
+                                </div>
+                                <div class="comment-content">
+                                    <div class="comment-user">Robert Brown</div>
+                                    <div class="comment-text">Beautiful scenery! 😍</div>
+                                    <div class="comment-actions">
+                                        <div class="comment-action like-comment">Like</div>
+                                        <div class="comment-action">Reply</div>
+                                        <div class="comment-time" onclick="displaydatetime()">
+    <p id="datetime"></p></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="post-container" id="post-2">
+                    <div class="post-header">
+                        <div class="post-avatar">
+                            <img src="https://randomuser.me/api/portraits/women/21.jpg" alt="User">
+                        </div>
+                        <div class="post-user">Jane Smith</div>
+                        <div class="post-time">5 hours ago</div>
+                    </div>
+                    <div class="post-content">
+                        Check out my new video tutorial on web development!
+                    </div>
+                    <div class="post-actions">
+                        <div class="post-action like-btn" data-post="2">
+                            <i class="fas fa-thumbs-up"></i> <span class="like-text">Like</span>
+                        </div>
+                        <div class="post-action comment-btn" data-post="2">
+                            <i class="fas fa-comment"></i> Comment
+                        </div>
+                        <div class="post-action share-btn" data-post="2">
+                            <i class="fas fa-share"></i> Share
+                        </div>
+                        <div class="post-action follow-btn" data-post="2">
+                            <i class="fas fa-user-plus"></i> Follow
+                        </div>
+                    </div>
+                    
+                    <!-- Comment section -->
+                    <div class="comment-section" id="comment-section-2" style="display: none;">
+                        <div class="comment-form">
+                            <textarea class="comment-input" placeholder="Write a comment..."></textarea>
+                            <button class="comment-submit">send</button>
+                        </div>
+                        <div class="comments-list">
+                            <!-- Comments will appear here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <!-- Other Content Sections -->
+            <div id="chat-content" class="content-section">
+                <h1 class="page-title">Chat</h1>
+                <p>Messaging interface</p>
+            </div>
+
+            <div id="find-me-content" class="content-section">
+                <h1 class="page-title">Find Me</h1>
+                <p>Location sharing features</p>
+            </div>
+
+            <div id="voice-call-content" class="content-section">
+                <h1 class="page-title">Voice Call</h1>
+                <p>Audio calling interface</p>
+            </div>
+
+            <div id="video-call-content" class="content-section">
+                <h1 class="page-title">Video Call</h1>
+                <p>Video calling interface</p>
+            </div>
+
+            <div id="live-content" class="content-section">
+                <h1 class="page-title">Live</h1>
+                <p>Live streaming features</p>
+            </div>
+
+            <div id="settings-content" class="content-section">
+                <h1 class="page-title">Settings</h1>
+                <p>Application settings and preferences</p>
+            </div>
+
+            <!-- Watch dropdown sections -->
+            <div id="download-content" class="content-section">
+                <h1 class="page-title">Download</h1>
+                <p>Download management</p>
+            </div>
+
+            <div id="upload-content" class="content-section">
+                <h1 class="page-title">Upload</h1>
+                <p>Upload files and media</p>
+            </div>
+
+            <div id="save-content" class="content-section">
+                <h1 class="page-title">Save</h1>
+                <p>Saved items</p>
+            </div>
+
+            <div id="watch-later-content" class="content-section">
+                <h1 class="page-title">Watch Later</h1>
+                <p>Your watch later list</p>
+            </div>
+
+            <!-- Recognize Me dropdown sections -->
+            <div id="friends-content" class="content-section">
+                <h1 class="page-title">Friends</h1>
+                <p>Your friends list and connections</p>
+            </div>
+
+            <div id="followers-content" class="content-section">
+                <h1 class="page-title">Followers</h1>
+                <p>People following your activity</p>
+            </div>
+
+            <div id="profile-details-content" class="content-section">
+                <h1 class="page-title">Profile Details</h1>
+                <p>Detailed profile information</p>
+                <div class="profile-details">
+                    <div class="avatar-upload">
+                        <div class="avatar-upload-preview">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Profile Avatar">
+                        </div>
+                    </div>
+                    <div class="profile-field">
+                        <label>Name</label>
+                        <div>Jane Doe</div>
+                    </div>
+                    <div class="profile-field">
+                        <label>Email</label>
+                        <div>jane.doe@example.com</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div id="account-details-content" class="content-section">
+                <h1 class="page-title">balance</h1>
+                <p>Detailed balance information</p>
+                <div class="account-details">
+        
+                    <div class="bally">
+                        <label>balance</label>
+                        <div>345</div>
+                    </div>
+                    <div class="profile-field">
+                        <label>Email</label>
+                        <div>jane.doe@example.com</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Share Modal -->
+    <div class="modal" id="share-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-title">Share Post</div>
+                <div class="modal-close" id="share-modal-close">×</div>
+            </div>
+            <div class="share-options">
+                <div class="share-option">
+                    <i class="fas fa-users"></i> Share to a group
+                </div>
+                <div class="share-option">
+                    <i class="fas fa-user"></i> Share to a friend
+                </div>
+                <div class="share-option">
+                    <i class="fas fa-search"></i> Share by searching
+                </div>
+            </div>
+            <input type="text" class="share-search" placeholder="Search for people or groups...">
+            <button class="share-submit">Share</button>
+        </div>
+    </div>  <script src="kamic.js">
+       
+    </script>
+
+    <script src="advanced.js">
+       
+    </script>
+
+</body></html>
